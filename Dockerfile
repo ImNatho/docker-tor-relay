@@ -9,6 +9,7 @@ RUN \
 
 # Expose torrc port
 EXPOSE 9001
+EXPOSE 9030
 
 # Insert config file
 COPY configs/bridge /etc/tor/bridge
