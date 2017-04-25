@@ -1,0 +1,4 @@
+ORPort 9001
+Nickname ${NICKNAME}
+ContactInfo Anonymous
+BridgeRelay 1
