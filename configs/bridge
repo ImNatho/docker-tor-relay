@@ -1,4 +1,5 @@
 ORPort 9001
+DirPort 9030
 Nickname ${NICKNAME}
 ContactInfo Anonymous
 BridgeRelay 1
