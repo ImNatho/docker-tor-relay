@@ -5,10 +5,10 @@ if [ -z "$TYPE" ]; then
 fi
 
 function append_or_replace {
-  if [ -z "$(grep -e "^$1.*$" $TYPE)" ]; then
+  if [ -z "$(grep -e "^$1.*$" /etc/tor/$TYPE)" ]; then
     echo "$1 $2" >> $TYPE
   else
-    sed -i "s/^$1.*/$1 $2/g" $TYPE
+    sed -i "s/^$1.*/$1 $2/g" /etc/tor/$TYPE
   fi
 }
 
@@ -29,6 +29,6 @@ else
 fi
 
 # Copy config to main config location
-cp $TYPE /etc/tor/torrc -f
+cp /etc/tor/$TYPE /etc/tor/torrc -f
 # Start tor with set config
 tor -f /etc/tor/torrc
