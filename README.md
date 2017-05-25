@@ -12,6 +12,7 @@ docker run -d \
   --restart=always \
   -e 'TYPE=middle' \
   -e 'NICKNAME=hacktheplanet' \
+  -p 9001 -p 9030 \
   --name tor-relay \
   imnatho/tor-relay
 ```
@@ -41,19 +42,12 @@ It is also recommended that you provide your contact information. This is mostly
 You can provide this information with the following flags.
 
 ```
--e 'CONTACT_NAME=John Smith' \
--e 'CONTACT_EMAIL=john.smith@example.com' \
--e 'CONTACT_GPG=YOUR-GPG-KEY-HERE' \ # Optional
-```
-
-```
 docker run -d \
   --restart=always \
   -e 'CONFIG=middle' \
   -e 'NICKNAME=SpaceDangerNoodle' \
-  -e 'CONTACT_NAME=John Smith' \
-  -e 'CONTACT_EMAIL=john.smith@example.com' \
-  -e 'CONTACT_GPG=YOUR-GPG-KEY-HERE' \
+  -e 'CONTACT_INFO=John Smith <john.smith@example.com>' \
+  -p 9001 -p 9030 \
   --name tor-relay \
   imnatho/tor-relay
 ```
