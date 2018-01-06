@@ -1,5 +1,5 @@
 FROM alpine:latest
-MAINTAINER ImNatho <me@natho.io>
+MAINTAINER Nathan Towell <me@natho.io>
 
 # Insert config dir
 COPY tor /etc/tor
