@@ -14,7 +14,7 @@ docker run -d \
   -e 'NICKNAME=hacktheplanet' \
   -p 9001 -p 9030 \
   --name tor-relay \
-  imnatho/tor-relay
+  nathantowell/tor-relay
 ```
 
 ### Configuration
@@ -49,5 +49,5 @@ docker run -d \
   -e 'CONTACT_INFO=John Smith <john.smith@example.com>' \
   -p 9001 -p 9030 \
   --name tor-relay \
-  imnatho/tor-relay
+  nathantowell/tor-relay
 ```
